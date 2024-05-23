@@ -5,7 +5,7 @@
 CovidApp is a web application that provides real-time COVID-19 data for different states and districts in India. The data is fetched from a reliable API and is updated regularly.
 
 ![img.png](docs/img.png)
-![img_1.png](docs/img_1.png)
+![img_1.png](docs/img1.png)
 
 ## Usage
 
