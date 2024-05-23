@@ -30,7 +30,6 @@ public class CovidDataFetchService {
 
     public long getCachedStateData(String state) {
         Map<String, Object> Statewise_Data = (Map<String, Object>) localMap.get(state);
-        System.out.println(localMap);
         Map<String, Object> total_Data = (Map<String, Object>) Statewise_Data.get("total");
         long confirmCases = ((Number) total_Data.get("confirmed")).longValue();
         return confirmCases;
