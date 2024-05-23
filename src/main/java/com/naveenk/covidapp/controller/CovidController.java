@@ -15,9 +15,16 @@ public class CovidController {
     @Autowired
     CovidDataService data;
 
-    @GetMapping("/citywise/{city}")
-    public String getCovidCases(@PathVariable String city) throws InterruptedException {
-        Integer covidData = data.getCovidData(city);
-        return "Covid cases in " +city +" = "+ covidData;
+    @GetMapping("/{state}")
+    public int getCovidCases(@PathVariable String state) throws InterruptedException {
+        long totalCases = data.getCovidData(state);
+        return (int) totalCases;
+    }
+
+    @GetMapping("/{state}/{city}")
+    public int getCovidCases(@PathVariable String state, @PathVariable String city) throws InterruptedException {
+        long totalCases = data.getCovidData(state, city);
+
+        return (int) totalCases;
     }
 }
