@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Data</title>
+    <meta name="description" content="COVID-19 Data Dashboard to view and analyze COVID-19 data for different states and districts in India.">
+    <title>COVID-19 Data Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>COVID-19 Data Dashboard</h1>
     </header>
-    <div class="mainContainer">
     <main>
-        <div class="container">
-            <h2>Select State</h2>
-            <select id="stateSelect">
-                <option value="default">Select State (Required) </option>
-                <!-- Options will be populated dynamically using JavaScript -->
-            </select>
-        </div>
+        <section class="mainContainer">
+            <div class="container">
+                <h2>Select State</h2>
+                <select id="stateSelect">
+                    <option value="" selected disabled>Select State (Required)</option>
+                    <!-- Options will be populated dynamically using JavaScript -->
+                </select>
+            </div>
 
-        <div class="container">
-            <h2>Select District</h2>
-            <select id="districtSelect">
-                <option value="default">Select District (Optional)</option>
-            </select>
-        </div>
+            <div class="container">
+                <h2>Select District</h2>
+                <select id="districtSelect">
+                    <option value="" selected>Select District (Optional)</option>
+                    <!-- Options will be populated dynamically based on the selected state -->
+                </select>
+            </div>
 
-        <div class="container">
-            <button id="getDataBtn">Show Data</button>
-        </div>
+            <div class="container">
+                <button id="getDataBtn">Show Data</button>
+            </div>
 
-        <div class="container data-container">
-            <h2 id="total_h2">Total Cases:</h2>
-            <div id="dataContainer"></div>
-        </div>
+            <div class="container data-container">
+                <h2 id="total_h2">Total Cases:</h2>
+                <div id="dataContainer"></div>
+            </div>
+        </section>
     </main>
-    </div>
     <footer>
-        <p>&copy; 2024 CovidApp. All rights reserved. | <a href="http://www.github.com/itsnaveenk">itsnaveenk on GitHub</a></p>
+        <p>&copy; 2024 CovidApp. All rights reserved. | <a href="http://www.github.com/itsnaveenk" target="_blank" rel="noopener noreferrer">itsnaveenk on GitHub</a></p>
     </footer>
 
-    <script src="script.js"></script>
-    <!-- <script src="districts.js"></script> -->
-
+    <script src="script.js" defer></script>
 </body>
 </html>
